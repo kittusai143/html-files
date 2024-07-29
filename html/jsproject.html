@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <h1>Details</h1>
+    <p>Details paragraph</p>
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+    <label for="age">Age:</label>
+    <input type="text" id="age">
+    <button onclick="displayInfo()">Submit</button>
+    <p id="demo"></p>
+    <script>
+        function displayInfo(){
+            let name=document.getElementById("name").value;
+            let age=document.getElementById("age").value;
+            let demo=document.getElementById("demo");
+
+            if (name !== "" && age !== ""){
+                demo.textContent="name:" + name + " , age: " + age;
+                
+            } else {
+                demo.textContent="Please enter both name and age";
+            }
+        }
+    </script>
+</html>

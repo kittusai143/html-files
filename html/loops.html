@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Javascript for in loop</h1>
+        <p>Javascript for in loop paragraph</p>
+        <p id="demo"></p>
+        <script>
+            const person={fname:"saikiran",lname:"Baluguri",age:23};
+            let text="";
+            for(let i in person){
+                text+=person[i]+"<br/>"
+            }
+            document.getElementById("demo").innerHTML=text;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Javascript Arrays</h1>
+        <p>Javascript Arrays paragraph</p>
+        <p id="demo"></p>
+        <script>
+            const numbers=[1,4,8,12,16,18,24,26];
+            let text="";
+            numbers.forEach(myFunction);
+            document.getElementById("demo").innerHTML=text;
+            function myFunction(value,index,array){
+                text+=value+"<br/>";
+            }
+        </script>
+    </body>
+</html>

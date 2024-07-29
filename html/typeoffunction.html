@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Javascript typeoffunction</h1>
+        <p>Javascript typeoffunction paragraph</p>
+        <p id="demo"></p>
+        <script>
+            document.getElementById("demo").innerHTML=
+            "john".constructor+"<br/>"+
+            (3.14).constructor+"<br/>"+
+            false.constructor+"<br/>"+
+            [1,2,3,4,5].constructor+"<br/>"+
+            {name:"john",age:23}.constructor+"<br/>"+
+            new Date().constructor+"<br/>"+
+            function(){}.constructor;
+        </script>
+    </body>
+</html>

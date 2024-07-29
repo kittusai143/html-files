@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Details</title>
+  </head>
+  <body>
+    <div class="output" id="output"></div>
+  </body>
+  <script>
+    console.log("gender:", sessionStorage.getItem("gender").value)
+    let outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = `
+                <p><strong>Name:</strong> ${sessionStorage.getItem("name")}</p>
+                <p><strong>Email:</strong> ${sessionStorage.getItem("email")}</p>
+                <p><strong>Status:</strong> ${sessionStorage.getItem("status")}</p>
+                <p><strong>Gender:</strong> ${sessionStorage.getItem("gender") ? sessionStorage.getItem("gender") : "Not specified"}</p>
+            `;
+  </script>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .image1{
+            margin-left: 700px;
+            margin-top: 70px;
+        }
+        .image{
+            width:558px;
+            height: 460px;
+        }
+        .heading{
+            margin-left:818px;
+        }
+        .input{
+            margin-left: 854px;
+        }
+        .input1{
+            margin-left: 854px;
+        }
+        .button{
+            margin-left: 866px;
+            width:150px;
+            background-color: blue;
+            color:white;
+        }
+        .credentials {
+            margin-top: 20px;
+            margin-left: 854px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image1">
+            <img class="image" src="https://media.istockphoto.com/id/1281150061/vector/register-account-submit-access-login-password-username-internet-online-website-concept.jpg?s=612x612&w=0&k=20&c=9HWSuA9IaU4o-CK6fALBS5eaO1ubnsM08EOYwgbwGBo=">
+        </div>
+        <div class="container1">
+            <div class="heading">
+                <h1>Me Call API-Login</h1>
+            </div>
+            <form id="myForm">
+                <input id="Email-Address" class="input" type="email" placeholder="Email address"><br />
+                <br/>
+                <input id="Password" class="input1" type="password" placeholder="Password"><br />
+                <br />
+                <button type="submit" class="button">Login</button>
+            </form>
+            <div class="output" id="output"></div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("myForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                const Email = document.getElementById("Email-Address").value;
+                const Password = document.getElementById("Password").value;
+                localStorage.setItem('Email', Email);
+                localStorage.setItem('Password', Password);
+                const outputDiv = document.getElementById("output");
+                outputDiv.innerHTML = `
+                    <p><strong>Email:</strong> ${localStorage.getItem("Email")}</p>
+                    <p><strong>Password:</strong> ${localStorage.getItem("Password")}</p>
+                `;
+                document.querySelector(".container").style.visibility = "hidden";
+            });
+        });
+    </script>    
+</body>
+</html>

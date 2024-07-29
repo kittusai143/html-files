@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <style>
+        h1{
+            margin-top:300px;
+            margin-left:515px;
+        }
+        h2{
+            margin-left: 712px;
+            margin-top: -52px;
+        }
+        .label{
+            margin-left: 421px;
+        } 
+        .label2{
+            margin-left: 421px;
+        }
+        .button{
+            margin-left: 585px;
+        }
+        .label3{
+            margin-left: 593px;
+        }
+    </style>
+    <body>
+        <h1>STANDARD</h1>
+        <h2>METRIC</h2>
+        <label class="label">Your Height:</label>
+        <input id="input" class="input" placeholder="(feet)">
+        <input class="input1" placeholder="(inches)"><br/>
+        <br/>
+        <label class="label2">Your Weight:</label>
+        <input class="input2" placeholder="(pounds)"><br/>
+        <br/>
+        <button class="button">Compute BMI</button><br/>
+        <br/>
+        <label class="label3">Your BMI:</label><br/>
+        <input class="input3" style="margin-left: 535px;">
+        <script>
+            function calculateBMI(weight, height) {
+            let bmi = weight / (height * height);
+            return bmi.toFixed(2);
+           }
+           document.querySelector(".button").addEventListener("click", function () {
+            let weight = parseFloat(document.querySelector(".input2").value);
+            let feet = parseFloat(document.getElementById("input").value);
+            let inches = parseFloat(document.querySelector(".input1").value);
+            let height = feet * 12 + inches;
+            height = height * 0.0254;
+            let bmi = calculateBMI(weight, height);
+            document.querySelector(".input3").value = bmi;
+            console.log("BMI:", bmi);
+        });
+        </script>
+    </body>
+</html>

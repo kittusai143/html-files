@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Template</h1>
+        <p>Template paragraph</p>
+        <p id="demo"></p>
+        <script>
+            let header="Template strings";
+            let tags=["template strings","javascript","es6"];
+            let html=`<h2>${header}</h2><ol>`;
+            for(let x of tags){
+                html += `<li>${x}</li>`;
+            }
+            html+=`</ol>`;
+            document.getElementById("demo").innerHTML=html;
+        </script>
+    </body>
+</html>

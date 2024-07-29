@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<style>
+    .button {
+        background-color: blue;
+        color: white;
+    }
+    .output {
+        margin-top: 20px;
+        border-top: 1px solid #ccc;
+        padding-top: 20px;
+    }
+</style>
+<body>
+    <div class="container">
+        <h1 class="heading">Add User</h1>
+        <form id="myForm">
+            <div class="mb-3">
+                <label for="name">Name</label><br>
+                <input type="text" class="form-control" id="name">
+                <p class="errorMessage" id="nameErrMsg"></p>
+            </div>
+            <br/>
+            <div class="mb-3">
+                <label for="email">Email</label><br>
+                <input type="text" class="form-control" id="email">
+                <p class="errorMessage" id="emailErrMsg"></p>
+            </div>
+            <br>
+            <div class="mb-3">
+                <select id="status" class="form-control">
+                    <option value="Active">Active</option>
+                    <option value="Inactive">Inactive</option>
+                </select>
+            </div>
+            <br>
+            <div class="mb-3">
+                <h1 class="gender-field-heading">Gender</h1>
+                <input type="radio" id="genderMale" value="Male" name="gender"/>
+                <label for="genderMale">Male</label>
+                <input type="radio" id="genderFemale" value="Female" name="gender"/>
+                <label for="genderFemale">Female</label>
+                <p class="errorMessage" id="genderErrMsg"></p>
+            </div>
+            <br>
+            <button class="button" id="submitButton">Submit</button>
+        </form>
+    </div>
+    <a href="./detailsName.html">see Details</a>
+    
+    <div class="output" id="output"></div>
+
+    <script>
+        document.getElementById("myForm").addEventListener("submit", function(event) {
+            document.querySelector(".container").style.display="none";
+            event.preventDefault();
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let status = document.getElementById("status").value;
+            let gender = document.querySelector('input[name="gender"]:checked');
+            console.log(gender.value);
+            sessionStorage.setItem('name',name);
+            sessionStorage.setItem('email',email);
+            sessionStorage.setItem('status',status);
+            sessionStorage.setItem('gender',gender.value);
+            let outputDiv = document.getElementById("output");
+            outputDiv.innerHTML = `
+                <p><strong>Name:</strong> ${sessionStorage.getItem("name")}</p>
+                <p><strong>Email:</strong> ${sessionStorage.getItem("email")}</p>
+                <p><strong>Status:</strong> ${sessionStorage.getItem("status")}</p>
+                <p><strong>Gender:</strong> ${gender ? sessionStorage.getItem("gender") : "Not specified"}</p>
+            `;
+        });
+    </script>
+</body>
+</html>

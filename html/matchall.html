@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The matchAll() Method</h1>
+
+<p>ES2020 intoduced the string method matchAll().</p>
+
+<p id="demo"></p>
+
+<script>
+let text = "I love cars , I love AUDI cars , I love flowers";
+const iterator = text.matchAll("cars");
+
+document.getElementById("demo").innerHTML = Array.from(iterator);
+</script>
+
+</body>
+</html>

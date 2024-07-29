@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Arrays</h1>
+<p>JavaScript arrays paragraph</p>
+<button onclick="myFunction()">Try it</button>
+<p id="demo"></p>
+
+<script>
+const fruits = ["Banana", "Orange", "Apple"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+  fruits[fruits.length] = "Lemon";
+  document.getElementById("demo").innerHTML = fruits;
+}
+</script>
+</body>
+</html>

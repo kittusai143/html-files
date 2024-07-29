@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .container1 {
+            margin-top: 100px;
+            padding-right: 100px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            margin-top: 150px;
+        }
+
+        .image {
+            height: 500px;
+            width: 700px;
+        }
+
+        .image1 {
+            margin-right: 50px;
+        }
+
+        .input {
+            width: 300px;
+        }
+
+        .input1 {
+            width: 300px;
+        }
+
+        .button {
+            margin-top: 20px;
+            background-color: blueviolet;
+            color: white;
+            padding: 20px;
+            width: 160px;
+            border-radius: 26px;
+        }
+
+        .label {
+            margin-left: 40px;
+        }
+
+        h1 {
+
+            margin-left: 550px;
+        }
+
+        h2 {
+            margin-left: 1299px;
+            margin-top: -50px;
+        }
+
+        h3 {
+            margin-left: 1470px;
+            margin-top: -45px;
+            color: blueviolet;
+        }
+        .login{
+            display: block;
+            margin-top: 565px;
+            margin-left:-500px;
+
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <h1>Creative</h1>
+    <h2>New User?</h2>
+    <h3>Sign Up</h3>
+    <div class="container">
+        <div class="image1">
+            <img class="image" src="https://ninjasites.com/images/blog/webpage-creation.png?v=1684153977260389102" alt="persons" />
+        </div>
+        <div class="container1">
+            <h4 class="heading">
+                Welcome Back!
+            </h4>
+            <p class="paragraph">
+                Login to continue
+            </p>
+            <input id="Email-Id" class="input" type="Email-Id" placeholder="Email-Id"><br />
+            <br />
+            <input id="password" class="input1" type="password" placeholder="Password"><br />
+            <br />
+            <button onclick="displayInfo()" class="button">LOGIN</button>
+            <label class="label">FORGET PASSWORD?</label>
+        </div>
+        <br />
+        <div>
+            <i class="fa fa-twitter" style="display:block; font-size:48px; margin-top:534px; margin-left: -200px; color:skyblue; background-color:lightgrey; padding:10px; border-radius:47px; width:45px"></i>
+        </div>
+        <div>
+            <i class="fa fa-facebook" style="margin-top:540px; display:block; margin-left:-287px; background-color:#3B5998; color:white; font-size: 48px; width:32px; padding:8px;"></i>
+        </div>
+        <div>
+            <i class="fa fa-google"  style="margin-top:550px; display:block; margin-left:-380px; color:red; background-color:lightgray; width:22px; padding:15px; font-size:25px; border-radius:45px;"></i>
+        </div>
+        <div>
+            <i class="login">Login with</i>
+        </div>
+        <script>
+            function displayInfo() {
+                let EmailId = document.getElementById("Email-Id").value;
+                let password = document.getElementById("password").value;
+
+                if (EmailId.trim() === "" || password.trim() === "") {
+                    console.log("Please Enter both Email-Id and Password");
+                    alert("Please Enter both Email-Id and Password");
+                } else if (EmailId === "sai" && password === "12345") {
+                    console.log("Login successfully");
+                    alert("Login successfully");
+                } else {
+                    console.log("Invalid Email-Id and password please try again");
+                    alert("Invalid Email-Id and password please try again");
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>

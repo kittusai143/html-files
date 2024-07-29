@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <body>
+            <h1>JavaScript arrays</h1>
+            <p>JavaScript arrays paragraph</p>
+            <p id="demo"></p>
+            <script>
+                const fruits=["Banana", "Orange", "Apple"];
+                fruits[3]="Lemon";
+
+                let flen=fruits.length;
+                let text="";
+                for(i=0;i<flen;i++){
+                    text+=fruits[i]+"<br>";
+                }
+                document.getElementById("demo").innerHTML=text;
+            </script>
+        </body>
+    </head>
+</html>

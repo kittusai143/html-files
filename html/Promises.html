@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            const URL="https://apis.ccbp.in/jokes/random";
+            const responsePromise=fetch(URL);
+            responsePromise
+            .then((response)=>{
+                return response.json();
+            })
+            .then((data)=>{
+                console.log(data);
+            });
+        </script>
+    </head>
+</html>

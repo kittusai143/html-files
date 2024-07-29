@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Javascript arrayfilter</h1>
+        <p>Javascript arrayfilter paragraph</p>
+        <p id="demo"></p>
+        <script>
+            const numbers=[45,8,35,9,16,10];
+            const over18=numbers.filter(myFunction);
+            document.getElementById("demo").innerHTML=over18;
+            function myFunction(value,index,array){
+                return value > 10;
+            }
+        </script>
+    </body>
+</html>

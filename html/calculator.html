@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Javascript calculator</title>
+</head>
+<style>
+</style>
+<body>
+   <h1>Calculator program in Javascript</h1>  
+   <div class="container">
+    <form name="form">
+        <input id="calculatorInput" type="text" name="expression"><br/>
+        <br/>
+        <input type="button" value="+" onclick="form.expression.value += '+'">
+        <input type="button" value="-" onclick="form.expression.value += '-'">
+        <input type="button" value="*" onclick="form.expression.value += '*'">
+        <input type="button" value="/" onclick="form.expression.value += '/'">
+        <input type="button" value="." onclick="form.expression.value += '.'">
+        <input type="button" value="%" onclick="form.expression.value += '%'">
+        <input type="button" value="answer" onclick="calculate()">
+        <br/><br/>
+        <input type="button" value="ClearAll" onclick="clearAll()">
+        <br/><br/>
+        <span id="calculatorOutput"></span> 
+    </form>
+   </div>
+   <script>
+        function calculate() {
+           let expression = document.forms["form"]["expression"].value;
+           let result = eval(expression);
+           document.getElementById("calculatorOutput").textContent = "Result: " + result;
+       }
+        function clearAll() {
+          document.forms["form"]["expression"].value = '';
+          document.getElementById("calculatorOutput").textContent = ''; 
+       }
+   </script>
+</body>
+</html>

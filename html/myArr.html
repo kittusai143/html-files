@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>JavaScript myArr</h1>
+        <p>JavaScript myArr paragraph</p>
+        <p id="demo"></p>
+        <script>
+            const myArr=[1,2,3,4,5,6];
+            const newArr=myArr.flatMap((x)=>x*2);
+            document.getElementById("demo").innerHTML=newArr;
+        </script>
+    </body>
+</html>

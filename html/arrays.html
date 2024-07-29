@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Arrays</h1>
+        <p>Arrays paragraph</p>
+        <p id="demo"></p>
+        <script>
+            const fruits=["Apple","Banana","Mango","Orange"];
+            let flen=fruits.length;
+
+            let text="<ul>";
+                for(let i=0;i<flen;i++){
+                    text+="<li>" + fruits[i] +"</li>";
+                }
+                text+="</ul>";
+                document.getElementById("demo").innerHTML=text;
+        </script>
+    </body>
+</html>

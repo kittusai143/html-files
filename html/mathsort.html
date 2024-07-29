@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Javascript mathsort</h1>
+        <p>Javascript mathsort paragraph</p>
+        <button onclick="myFunction()">Try it</button>
+        <p id="demo"></p>
+        <script>
+            const points=[20,25,30,35,37,40,42];
+            document.getElementById("demo").innerHTML=points;
+            function myFunction(){
+                points.sort(function(){return 0.5-Math.random()});
+                document.getElementById("demo").innerHTML=points;
+            }
+        </script>
+    </body>
+</html>

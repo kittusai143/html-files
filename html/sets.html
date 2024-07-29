@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Javascript sets</h1>
+        <p>Javascript sets paragraph</p>
+        <p id="demo"></p>
+        <script>
+            const letters=new Set();
+            const a="a";
+            const b="b";
+            const c="c";
+
+            letters.add(a);
+            letters.add(b);
+            letters.add(c);
+
+            document.getElementById("demo").innerHTML=letters.size;
+
+        </script>
+    </body>
+</html>

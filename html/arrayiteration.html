@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Javascript arrayiteration</h1>
+        <p>Javascript arrayiteration paragraph</p>
+        <p id="demo"></p>
+        <script>
+            const numbers=[45,6,8,9,25];
+            let text="";
+            numbers.forEach(myFunction);
+            document.getElementById("demo").innerHTML=text;
+            function myFunction(value,index,array){
+                text += value + "<br>";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Javascript ArrayReduce</h1>
+        <p>Javascript ArrayReduce paragraph</p>
+        <p id="demo"></p>
+        <script>
+            const numbers=[1,6,10,14,16,20];
+            let sum=numbers.reduce(myFunction,100);
+            document.getElementById("demo").innerHTML=sum;
+            function myFunction(total,value,index,array){
+                return total+value;
+            }
+        </script>
+    </body>
+</html>

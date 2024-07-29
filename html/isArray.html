@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Javascript isArray heading</h1>
+        <p>Javascript isArray paragraph</p>
+        <p id="demo"></p>
+        <script>
+            const fruits=["Banana","Apple","Mango","Orange","Grapes"];
+            document.getElementById("demo").innerHTML=isArray(fruits);
+
+            function isArray(myArray){
+                return myArray.constructor===Array;
+            }
+        </script>
+    </body>
+</html>

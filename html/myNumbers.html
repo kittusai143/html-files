@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>myNumbers</h1>
+        <p>myNumbers pargraph</p>
+        <p id="demo"></p>
+        <script>
+            let myNumber=2;
+            let txt="";
+            while(myNumber != Infinity){
+                myNumber=myNumber*myNumber;
+                txt=txt+myNumber+"<br/>";
+            }
+            document.getElementById("demo").innerHTML=txt;
+        </script>
+    </body>
+</html>

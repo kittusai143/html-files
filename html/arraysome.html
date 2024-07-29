@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Javascript everyFunction</h1>
+        <p>Javascript everyFunction paragraph</p>
+        <p id="demo"></p>
+        <script>
+            const numbers=[1,5,7,4,8,25,13,16,18];
+            let someOver18=numbers.some(myFunction);
+            document.getElementById("demo").innerHTML=someOver18;
+            function myFunction(value,index,array){
+                return value < 20;
+            }
+        </script>
+    </body>
+</html>

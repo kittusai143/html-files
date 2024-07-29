@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Javascript forin</h1>
+        <p>Javascript forin paragraph</p>
+        <p id="demo"></p>
+        <script>
+            const fruits=["Apple","Banana","Orange","Grapes","Mango","Kiwi"];
+            let text="";
+            for(let i in fruits){
+                text+=fruits[i]+"<br>";
+            }
+            document.getElementById("demo").innerHTML=text;
+        </script>
+    </body>
+</html>

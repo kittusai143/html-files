@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <h1>Javascript for loop</h1>
+        <p>Javascript for loop paragraph</p>
+        <p id="demo"></p>
+        <script>
+            const cars = ["BMW", "Volvo", "Saab", "Ford"];
+             let i = 3;
+             let length = cars.length;
+             let text = "";
+
+            for (; i < length; i++) {
+             text += cars[i] + "<br>";
+           }
+          document.getElementById("demo").innerHTML = text;
+        </script>
+    </body>
+</html>
